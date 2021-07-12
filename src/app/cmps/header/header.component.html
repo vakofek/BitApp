@@ -1,0 +1,27 @@
+<Header class="container">
+    <div class="logo">
+        <img src="../../../assets/logo.png" alt="logo" />
+        <h1>BitApp</h1>
+    </div>
+    <nav class="{{isScreenOpen}}" >
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <span>·</span>
+        <a routerLink="contact" routerLinkActive="active">Contacts</a>
+        <span>·</span>
+        <a routerLink="chart" routerLinkActive="active">Charts</a>
+
+
+       <div class="login-side-nav-btn-container">
+           <span>·</span>
+           <a routerLink="login" routerLinkActive="active" *ngIf="!user">Log in</a>
+           <button (click)="onLogout()" *ngIf="user">Log out</button>
+        </div>
+
+
+    </nav>
+    <button class="side-nav-btn" *ngIf="isScreenOpen" (click)="toggleSideNav.emit()">☰</button>
+    <div class="login-container">
+        <a routerLink="login" routerLinkActive="active" *ngIf="!user">Log in</a>
+        <button (click)="onLogout()" *ngIf="user">Log out</button>
+    </div>
+</Header>

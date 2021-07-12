@@ -1,0 +1,10 @@
+<section class="login-page">
+    <h2>Login</h2>
+    <p>{{err}}</p>
+    <form (submit)="onLoginUser()">
+        <input type="text" name='username' [(ngModel)]="credentials.username" placeholder="username">
+        <input type="password" name='password' [(ngModel)]="credentials.password" placeholder="password">
+        <button>Login</button>
+    </form>
+    <a routerLink="/signup">New User?</a>
+</section>

@@ -1,0 +1,5 @@
+<div class="transfer-preview">
+    <h4><span> ฿ {{move.coins}} </span> | <span>{{(move.coins*marketPrice) | currency:'USD'}}</span></h4>
+    <h4 *ngIf="title==='Your last moves'">{{contactName}} </h4>
+    <h4>{{move.transferAt|date}}</h4>
+</div>

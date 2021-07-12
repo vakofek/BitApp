@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import "../styles/setup/mixins";
+@import "../styles//setup//variables";
+
+.main-screen{
+    background-color: rgba(0, 0, 0, 0.363);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+
+    &.close{
+        display: none;
+    }
+}
+
+.app {
+    font-family: Montserrat, sans-serif;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 #00000026;
+    background-color: #fff;
+    min-height: 97vh;
+
+
+    @include for-wide-layout {
+    min-height: 80vh;
+    margin:10vh 40px;
+    border-radius: 40px;
+
+
+
+    }
+}

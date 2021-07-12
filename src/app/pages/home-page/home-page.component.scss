@@ -1,0 +1,136 @@
+@import "../../../styles/setup/mixins";
+@import "../../../styles/setup/variables";
+
+.home-page {
+    main {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10vw;
+
+        > * {
+            display: flex;
+            width: 35%;
+        }
+
+        @include for-mobile-layout {
+            flex-direction: column;
+            align-items: center;
+
+            > * {
+                width: 100%;
+            }
+        }
+        @include for-narrow-layout {
+            flex-direction: column;
+            align-items: center;
+
+            > * {
+                width: 100%;
+            }
+        }
+        @include for-wide-layout {
+            flex-direction: row;
+            align-items: flex-start;
+
+            > * {
+                width: 35%;
+            }
+        }
+        > div:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+        > :last-child {
+            flex: 1;
+        }
+
+        .user-details {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: contain;
+            }
+
+            @include for-mobile-layout {
+                flex-direction: column;
+            }
+            @include for-narrow-layout {
+                flex-direction: column;
+            }
+            @include for-wide-layout {
+                flex-direction: row;
+            }
+        }
+        .add-to-wallet {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                input {
+                    padding: 10px 20px;
+                }
+                button {
+                    padding: 10px 10px;
+                }
+            }
+
+            @include for-mobile-layout {
+                align-items: center;
+            }
+            @include for-narrow-layout {
+                align-items: center;
+            }
+            @include for-wide-layout {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .hero {
+        background-image: url(https://crownleadership.com/wp-content/uploads/2016/06/business-background-picture-wide-hd-cool-wallpaper-8548.jpg);
+        background-repeat: no-repeat;
+        padding: 125px 0;
+
+        h1 {
+            font-size: 40px;
+            line-height: 70px;
+            font-weight: 500;
+            max-width: 60vw;
+            margin-left: 4rem;
+        }
+        p {
+            color: rgb(39, 39, 39);
+            font-family: Montserrat, sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-left: 4rem;
+        }
+
+        @include for-wide-layout {
+          h1 {
+            font-size: 90px;
+            line-height: 95px;
+            font-weight: 200;
+            max-width: 60vw;
+            margin-left: 4rem;
+        }
+        }
+    }
+}
+
+.container {
+    margin: 0px 4rem;
+}

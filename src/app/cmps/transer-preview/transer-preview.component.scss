@@ -1,0 +1,36 @@
+@import "../../../styles/setup/mixins";
+@import "../../../styles/setup/variables";
+
+.transfer-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+    h4 {
+        margin: 0 0;
+        padding: 0 0;
+        font-weight: inherit;
+
+
+        &:first-child {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 5px;
+            span:first-child {
+                color: rgb(126, 180, 63);
+            }
+            span:last-child {
+                color: rgb(131, 131, 131);
+            }
+        }
+        &:last-child {
+            font-size: 14px;
+            margin-top: 5px;
+            color: rgb(131, 131, 131);
+        }
+    }
+
+    border-bottom: 1px solid rgb(138, 138, 138);
+    padding: 10px 30px;
+    font-weight: 400;
+}

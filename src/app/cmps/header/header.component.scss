@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+@import "../../../styles/setup/mixins";
+@import "../../../styles/setup/variables";
+
+Header {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include for-mobile-layout {
+
+    nav {
+      transform: translateX(0%);
+      box-shadow: 0 0 9px #00000021;
+      padding-top: 50px;
+      background-color: rgb(240, 240, 240);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      left: unset;
+      width: 40vw;
+      z-index: 2;
+
+      &.close {
+        transform: translateX(100%);
+      }
+
+      .login-side-nav-btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  @include for-narrow-layout {
+
+    nav {
+      transform: translateX(0%);
+      box-shadow: 0 0 9px #00000021;
+      padding-top: 50px;
+      background-color: rgb(240, 240, 240);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      left: unset;
+      width: 40vw;
+      z-index: 2;
+
+      &.close {
+        transform: translateX(100%);
+      }
+
+      .login-side-nav-btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  @include for-wide-layout {
+    h1 {
+      font-size: 24px;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+    nav {
+      height: 0;
+      box-shadow: unset;
+      padding-top: unset;
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      gap: 10px;
+      left: 50%;
+      top: unset;
+      right: unset;
+      transform: translateX(-50%);
+      width: unset;
+      z-index: 0;
+
+      &.close {
+        transform: translateX(-50%);
+      }
+
+      .login-side-nav-btn-container {
+        display: none;
+      }
+    }
+  }
+
+  a,
+  button {
+    border: none;
+    background-color: transparent;
+    color: rgb(100, 100, 100);
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgb(32, 32, 32);
+      color: white;
+    }
+  }
+
+  .side-nav-btn {
+    @include for-mobile-layout {
+      display: block;
+    }
+    @include for-narrow-layout {
+      display: block;
+    }
+    @include for-wide-layout {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h1 {
+      margin: 0 0;
+      font-family: Prosto One, sans-serif;
+    }
+  }
+
+  .login-container {
+    display: flex;
+    gap: 25px;
+
+    button:last-child {
+      color: white;
+      background-color: rgb(14, 13, 13);
+    }
+  }
+
+  @include for-mobile-layout {
+    .login-container {
+      display: none;
+    }
+  }
+  @include for-narrow-layout {
+    .login-container {
+      display: none;
+    }
+  }
+  @include for-wide-layout {
+    .login-container {
+      display: block;
+    }
+  }
+}
+
+.container {
+  margin: 0px 4rem;
+}

@@ -1,0 +1,26 @@
+<div class="home-page">
+    <main class="container" *ngIf="user">
+        <div>
+            <div class="user-details">
+                <img [src]="user.imgUrl" />
+                <div>
+                    <h2>Hello {{user.name}}</h2>
+                    <h4>Coins: {{user.coins}}</h4>
+                    <h4>BTC: {{getCurrValue().y}}</h4>
+                </div>
+            </div>
+            <div class="add-to-wallet">
+                <h3>Here you can deposit coins</h3>
+                <div>
+                    <input type="number" name="coins" [(ngModel)]="coins">
+                    <button (click)="onAddCoins()">Add</button>
+                </div>
+            </div>
+        </div>
+        <transfer-list [moves]="user.moves" title="Your last moves"></transfer-list>
+    </main>
+    <div class="hero">
+        <h1>The next generation payment method</h1>
+        <p>The most hype generation payment</p>
+    </div>
+</div>

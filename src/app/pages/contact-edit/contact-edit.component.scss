@@ -1,0 +1,57 @@
+@import "../../../styles/setup/mixins";
+@import "../../../styles/setup/variables";
+
+
+.contact-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    width: 400px;
+    margin: 0 auto;
+
+    > div:first-child {
+      display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    img {
+        border-radius: 13px;
+    }
+
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        input {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: inherit;
+            border-radius: 7px;
+            border: 1px solid rgb(163, 163, 163);
+        }
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        color: rgb(100, 100, 100);
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 12px 25px;
+        border-radius: 30px;
+        transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+        &:hover {
+            background-color: rgb(32, 32, 32);
+            color: white;
+        }
+    }
+
+    @include for-wide-layout {}
+}

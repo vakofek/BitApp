@@ -1,0 +1,10 @@
+<div class="contact-filter">
+  <label for="">
+    <input
+      type="text"
+      placeholder="Filter by name"
+      [(ngModel)]="filterByCopy.term"
+      (ngModelChange)="onFilter.emit(filterByCopy)"
+    />
+  </label>
+</div>

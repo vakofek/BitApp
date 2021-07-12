@@ -1,0 +1,52 @@
+@import "../../../styles/setup/mixins";
+@import "../../../styles/setup/variables";
+
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    max-width: 400px;
+    margin: 0 auto;
+    img {
+        border-radius: 13px;
+    }
+    .container {
+        margin: 0px 4rem;
+    }
+    div:first-child {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    p{
+      width: 250px;
+      text-align: center;
+    }
+
+    button,
+    a {
+        border: none;
+        background-color: transparent;
+        color: rgb(100, 100, 100);
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+        &:hover {
+            background-color: rgb(32, 32, 32);
+            color: white;
+        }
+    }
+
+    @include for-wide-layout{
+
+    }
+}

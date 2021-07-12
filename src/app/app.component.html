@@ -1,0 +1,11 @@
+<div class="app">
+
+    <app-header [isScreenOpen] = "isScreenOpen" (toggleSideNav)="toggleSideNav()"></app-header>
+    <div (click)="toggleSideNav()" class="main-screen {{isScreenOpen}}"></div>
+    <router-outlet></router-outlet>
+
+    <!-- <home-page *ngIf="selectedPage === 'home'"></home-page>
+    <contact-page *ngIf="selectedPage === 'contact'"></contact-page>
+    <chart-page *ngIf="selectedPage === 'chart'"></chart-page> -->
+
+</div>

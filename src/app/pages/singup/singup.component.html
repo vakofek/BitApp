@@ -1,0 +1,10 @@
+<section class="signup-page">
+    <h2>Sign up</h2>
+    <form (submit)="onSignupUser()">
+        <input type="text" name='name' [(ngModel)]="user.name" placeholder="Full Name">
+        <input type="text" name='username' [(ngModel)]="user.username" placeholder="Username">
+        <input type="password" name='password' [(ngModel)]="user.password" placeholder="password">
+        <button>Sign Up</button>
+    </form>
+    <a routerLink="/login">Already got an account?</a>
+</section>
